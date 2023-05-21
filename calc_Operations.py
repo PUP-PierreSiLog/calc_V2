@@ -39,9 +39,10 @@ class Operations:
             prod=operand_one*operand_two
             print("The product of the two operands is " + str(prod))
         if chosen_operation=="D":
-            try:
-                quot=operand_one/operand_two
-            except ZeroDivisionError:
-                while True:
-                    operand_two=float(input("Your second operand cannot be zero! Input another number"))
+            while True:
+                try:
+                    quot=operand_one/operand_two
+                    print("The quotient of the two operands is " + str(quot))
                     break
+                except ZeroDivisionError:
+                        operand_two=float(input("Your second operand cannot be zero! Input another number: "))
