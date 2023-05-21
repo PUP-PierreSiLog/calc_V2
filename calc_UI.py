@@ -1,6 +1,7 @@
 import tkinter as tk
 import pyfiglet
 from tkinter import ttk
+import calc_Operations
 class UI:
     def __init__(self):
         self.window=tk.Tk()
@@ -33,8 +34,19 @@ class UI:
         dropdown.pack()
 
         def handle_selection(event):
-            global selected_operation
             selected_operation = dropdown.get()
+            while True:
+                try:
+                    operand_one=float(input("Please input your first number: "))
+                    break
+                except ValueError:
+                    print("Operand must be a number! Please try again.")
+            while True:
+                try:
+                    operand_two=float(input("Please input your second number: "))
+                    break
+                except ValueError:
+                    print("Operand must be a number! Please try again.")
             print("Selected operation:", selected_operation)
 
         dropdown.bind("<<ComboboxSelected>>", handle_selection)

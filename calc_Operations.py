@@ -29,7 +29,7 @@ class Operations:
 
     def operations_proper(self):
         global operand_one, operand_two
-        chosen_operation=user_operation
+        chosen_operation=ui.operation_selection.dropdown.get()
         if chosen_operation=="A":
             sum=operand_one + operand_two
             print("The sum of the operands is " + str(sum))
