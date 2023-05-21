@@ -14,13 +14,11 @@ class Operations:
     def input_numbers(self):
         while True:
             try:
-                global operand_one
                 operand_one=float(input("Please input your first number: "))
                 break
             except ValueError:
                 print("Operand must be a number! Please try again.")
             try:
-                global operand_two
                 operand_two=float(input("Please input your second number: "))
                 break
             except ValueError:
@@ -28,18 +26,19 @@ class Operations:
 
     def operations_proper(self):
         chosen_operation=user_operation
+        self.input_numbers()
         if chosen_operation=="A":
-            sum=operand_one+operand_two
+            sum=self.operand_one+self.operand_two
             print("The sum of the operands is " + str(sum))
         if chosen_operation=="S":
-            diff=operand_one-operand_two
+            diff=self.operand_one-self.operand_two
             print("The difference of two operands is " + str(diff))
         if chosen_operation=="M":
-            prod=operand_one*operand_two
+            prod=self.operand_one*self.operand_two
             print("The product of the two operands is " + str(prod))
         if chosen_operation=="D":
             try:
-                quot=operand_one/operand_two
+                quot=self.operand_one/self.operand_two
             except ZeroDivisionError:
                 while True:
                     operand_two=float(input("Your second operand cannot be zero! Input another number"))
