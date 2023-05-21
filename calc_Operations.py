@@ -13,9 +13,14 @@ class Operations:
 
     def input_numbers(self):
         while True:
-            global operand_one, operand_two
             try:
+                global operand_one
                 operand_one=float(input("Please input your first number: "))
+                break
+            except ValueError:
+                print("Operand must be a number! Please try again.")
+            try:
+                global operand_two
                 operand_two=float(input("Please input your second number: "))
                 break
             except ValueError:
@@ -39,4 +44,3 @@ class Operations:
                 while True:
                     operand_two=float(input("Your second operand cannot be zero! Input another number"))
                     break
-                
