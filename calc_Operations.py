@@ -26,3 +26,17 @@ class Operations:
         if chosen_operation=="A":
             sum=operand_one+operand_two
             print("The sum of the operands is " + str(sum))
+        if chosen_operation=="S":
+            diff=operand_one-operand_two
+            print("The difference of two operands is " + str(diff))
+        if chosen_operation=="M":
+            prod=operand_one*operand_two
+            print("The product of the two operands is " + str(prod))
+        if chosen_operation=="D":
+            try:
+                quot=operand_one/operand_two
+            except ZeroDivisionError:
+                while True:
+                    operand_two=float(input("Your second operand cannot be zero! Input another number"))
+                    break
+                
