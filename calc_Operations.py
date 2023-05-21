@@ -12,15 +12,14 @@ class Operations:
                 print("Not a valid operation! Please try again.")
 
     def input_numbers(self):
+        global operand_one, operand_two
         while True:
-            global operand_one
             try:
                 operand_one=float(input("Please input your first number: "))
                 break
             except ValueError:
                 print("Operand must be a number! Please try again.")
         while True:
-            global operand_two
             try:
                 operand_two=float(input("Please input your second number: "))
                 break
@@ -28,9 +27,10 @@ class Operations:
                 print("Operand must be a number! Please try again.")
 
     def operations_proper(self):
+        global operand_one, operand_two
         chosen_operation=user_operation
         if chosen_operation=="A":
-            sum=operand_one+operand_two
+            sum=operand_one + operand_two
             print("The sum of the operands is " + str(sum))
         if chosen_operation=="S":
             diff=operand_one-operand_two
