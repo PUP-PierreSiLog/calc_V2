@@ -25,4 +25,4 @@ class Operations:
         chosen_operation=user_operation
         if chosen_operation=="A":
             sum=operand_one+operand_two
-            print("The sum of the operands is " + sum)
+            print("The sum of the operands is " + str(sum))
