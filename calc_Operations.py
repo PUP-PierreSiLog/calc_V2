@@ -1,3 +1,4 @@
+from calc_UI import ui
 class Operations:
     def choose_operations(self):
         while True:
