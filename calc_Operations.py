@@ -9,6 +9,7 @@ class Operations:
                 break
             else:
                 print("Not a valid operation! Please try again.")
+        return user_operation
 
     def input_numbers(self):
         while True:
@@ -18,3 +19,8 @@ class Operations:
                 break
             except ValueError:
                 print("Operand must be a number! Please try again.")
+
+    def operations_proper(self):
+        chosen_operation=user_operation
+        if chosen_operation=="A":
+            print("Mwa")
