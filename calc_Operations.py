@@ -2,6 +2,7 @@ class Operations:
     def choose_operations(self):
         while True:
             operations_list=["A", "S", "M", "D"]
+            global user_operation
             user_operation=input("Please input an operation to use. Type the letters indicated for each operation: A for Addition, M for multiplication, S for subtraction, D for division: ")
             user_operation=user_operation.upper()
             if user_operation in operations_list:
@@ -9,7 +10,6 @@ class Operations:
                 break
             else:
                 print("Not a valid operation! Please try again.")
-        return user_operation
 
     def input_numbers(self):
         while True:
