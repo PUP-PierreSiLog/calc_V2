@@ -9,3 +9,12 @@ class Operations:
                 break
             else:
                 print("Not a valid operation! Please try again.")
+
+    def input_numbers(self):
+        while True:
+            try:
+                operand_one=float(input("Please input your first number: "))
+                operand_two=float(input("Please input your second number: "))
+                break
+            except ValueError:
+                print("Operand must be a number! Please try again.")
