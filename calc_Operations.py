@@ -13,6 +13,7 @@ class Operations:
 
     def input_numbers(self):
         while True:
+            global operand_one, operand_two
             try:
                 operand_one=float(input("Please input your first number: "))
                 operand_two=float(input("Please input your second number: "))
@@ -23,4 +24,5 @@ class Operations:
     def operations_proper(self):
         chosen_operation=user_operation
         if chosen_operation=="A":
-            print("Mwa")
+            sum=operand_one+operand_two
+            print("The sum of the operands is " + sum)
