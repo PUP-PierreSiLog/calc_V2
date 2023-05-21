@@ -10,6 +10,7 @@ class Operations:
                 break
             else:
                 print("Not a valid operation! Please try again.")
+
     def input_numbers(self):
         while True:
             global operand_one, operand_two
@@ -50,7 +51,13 @@ class Operations:
         while True:
             loop_options=['Y','N']
             user_loop=input("Do you want to do another calculation? (Y/N)")
-            if loop_options=="Y":
-                
-            else:
+            user_loop=user_loop.upper()
+            if user_loop=="Y":
+                self.choose_operations()
+                self.input_numbers()
+                self.operations_proper()
+                continue
+            elif "N" in user_loop:
                 break
+            else:
+                user_loop=input("Invalid input! Please reinput (Y/N)")
