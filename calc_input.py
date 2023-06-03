@@ -11,3 +11,6 @@ class GetInput:
                     return chosen_operation
                 else:
                     print("Not a valid operation! Please try again.")
+    def input_number(self):
+        integer=float(input("Kindly input a number:"))
+        return integer
