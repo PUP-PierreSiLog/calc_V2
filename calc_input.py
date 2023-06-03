@@ -18,7 +18,7 @@ class GetInput:
     def loop(self):
         while True:
             from calc_Operations import Operations
-            from calc_Operations import AdvancedDivisionCalculator
+            from AdvancedDivisionCalculator import AdvancedDivisionCalculator
             op=Operations()
             advanced=AdvancedDivisionCalculator()
             user_loop = input("Do you want to do another calculation? (Y/N)")

@@ -27,13 +27,6 @@ class Operations:
                         else:
                             print("Invalid answer! Please try again.")
 
-class AdvancedDivisionCalculator(Operations):
-    def no_remainder(self, chosen_operation, operand_one, operand_two):
-        if chosen_operation=="D":
-            no_remainder_result=operand_one//operand_two
-            print("Quotient with no remainder is " +str(no_remainder_result))
-        else:
-            pass
     def remainder_only(self, chosen_operation, operand_one, operand_two):
         if chosen_operation=="D":
             remainder_only_result=operand_one%operand_two
