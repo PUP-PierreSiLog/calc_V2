@@ -27,19 +27,4 @@ class Operations:
                         else:
                             print("Invalid answer! Please try again.")
 
-    def remainder_only(self, chosen_operation, operand_one, operand_two):
-        if chosen_operation=="D":
-            remainder_only_result=operand_one%operand_two
-            print("The remainder is " + str(remainder_only_result))
-        else:
-            pass
-
-        
-                    # if "M" in division_choices:
-                    #     result = operand_one % operand_two
-                    #     print(result)
-                    # if "NR" in division_choices:
-                    #     result = operand_one // operand_two
-                    #     print(result)
-
 

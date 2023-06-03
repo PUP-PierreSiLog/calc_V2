@@ -19,8 +19,10 @@ class GetInput:
         while True:
             from calc_Operations import Operations
             from AdvancedDivisionCalculator import AdvancedDivisionCalculator
+            from AdvancedDivisionCalculator_2 import RemainderOnly
             op=Operations()
             advanced=AdvancedDivisionCalculator()
+            advanced_two=RemainderOnly()
             user_loop = input("Do you want to do another calculation? (Y/N)")
             user_loop = user_loop.upper()
             if user_loop == "Y":
@@ -29,7 +31,7 @@ class GetInput:
                 operand_two=self.input_number()
                 op.operations_proper(chosen_operation, operand_one, operand_two)
                 advanced.no_remainder(chosen_operation, operand_one, operand_two)
-                advanced.remainder_only(chosen_operation, operand_one, operand_two)
+                advanced_two.remainder_only(chosen_operation, operand_one, operand_two)
                 continue
             elif user_loop == "N":
                 break
