@@ -1,8 +1,8 @@
 from calc_Operations import Operations
-from calc_input import UserInput
-ui=UserInput()
+from calc_input import Input
+ui=Input()
 Op=Operations()
-Op.choose_operations()
+ui.choose_operations()
 Op.input_numbers()
 Op.operations_proper()
 Op.loop()
