@@ -1,4 +1,3 @@
-from calc_input import GetInput
 class Operations:
     def operations_proper(self, chosen_operation, operand_one, operand_two):
         if chosen_operation == "A":
@@ -18,37 +17,29 @@ class Operations:
                     break
                 except ZeroDivisionError:
                     operand_two = float(input("Your second operand cannot be zero! Input another number: "))
+                    # If division, asks the user if they want to see the whole number only or the remainder only
+                    division_choices_list = ["M", "NR"]
+                    while True:
+                        division_choices = input("To know the remainder of your equation, type M. If you want to know the result without any remainder, type NR.")
+                        division_choices = division_choices.upper()
+                        if division_choices in division_choices_list:
+                            break
+                        else:
+                            print("Invalid answer! Please try again.")
 
-            # If division, asks the user if they want to see the whole number only or the remainder only
-            division_choices_list = ["M", "NR"]
-            while True:
-                division_choices = input("To know the remainder of your equation, type M. If you want to know the result without any remainder, type NR.")
-                division_choices = division_choices.upper()
-                if division_choices in division_choices_list:
-                    break
-                else:
-                    print("Invalid answer! Please try again.")
+class AdvancedDivisionCalculator(Operations):
+    def no_remainder(self, operand_one, operand_two):
+        no_remainder_result=operand_one//operand_two
+        return no_remainder_result
+    def remainder_only(self, operand_one, operand_two):
+        remainder_only_result=operand_one%operand_two
+        return remainder_only_result
+        
+                    # if "M" in division_choices:
+                    #     result = operand_one % operand_two
+                    #     print(result)
+                    # if "NR" in division_choices:
+                    #     result = operand_one // operand_two
+                    #     print(result)
 
-            if "M" in division_choices:
-                result = operand_one % operand_two
-                print(result)
-            if "NR" in division_choices:
-                result = operand_one // operand_two
-                print(result)
-
-    def loop(self):
-        while True:
-            get_input=GetInput()
-            user_loop = input("Do you want to do another calculation? (Y/N)")
-            user_loop = user_loop.upper()
-            if user_loop == "Y":
-                chosen_operation=get_input.choose_operations()
-                operand_one=get_input.input_number()
-                operand_two=get_input.input_number()
-                self.operations_proper(chosen_operation, operand_one, operand_two)
-                continue
-            elif user_loop == "N":
-                break
-            else:
-                print("Invalid input! Please reinput (Y/N)")
 
