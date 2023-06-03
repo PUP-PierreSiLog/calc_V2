@@ -1,7 +1,5 @@
-import pyfiglet
 from calc_input import Input
 class Operations:
-
     def input_numbers(self):
         while True:
             global operand_one, operand_two
@@ -17,7 +15,9 @@ class Operations:
             except ValueError:
                 print("Operand must be a number! Please try again.")
 
-    def operations_proper(self, chosen_operation):
+    def operations_proper(self):
+        input=Input()
+        chosen_operation=input.choose_operations
         global operand_one, operand_two
         if chosen_operation=="A":
             sum=operand_one + operand_two

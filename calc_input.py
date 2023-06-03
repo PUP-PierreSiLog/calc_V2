@@ -10,6 +10,5 @@ class Input:
                 if chosen_operation in operations_list:
                     print('You chose ' + chosen_operation)
                     return chosen_operation
-                    break
                 else:
                     print("Not a valid operation! Please try again.")
