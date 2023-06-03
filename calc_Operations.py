@@ -28,12 +28,19 @@ class Operations:
                             print("Invalid answer! Please try again.")
 
 class AdvancedDivisionCalculator(Operations):
-    def no_remainder(self, operand_one, operand_two):
-        no_remainder_result=operand_one//operand_two
-        return no_remainder_result
-    def remainder_only(self, operand_one, operand_two):
-        remainder_only_result=operand_one%operand_two
-        return remainder_only_result
+    def no_remainder(self, chosen_operation, operand_one, operand_two):
+        if chosen_operation=="D":
+            no_remainder_result=operand_one//operand_two
+            print("Quotient with no remainder is " +str(no_remainder_result))
+        else:
+            pass
+    def remainder_only(self, chosen_operation, operand_one, operand_two):
+        if chosen_operation=="D":
+            remainder_only_result=operand_one%operand_two
+            print("The remainder is " + str(remainder_only_result))
+        else:
+            pass
+
         
                     # if "M" in division_choices:
                     #     result = operand_one % operand_two

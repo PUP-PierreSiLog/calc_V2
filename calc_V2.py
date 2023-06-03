@@ -1,9 +1,14 @@
 from calc_Operations import Operations
+from calc_Operations import AdvancedDivisionCalculator
 from calc_input import GetInput
 ui=GetInput()
-Op=Operations()
+
+basic_calculations=Operations()
+advanced_calculations=AdvancedDivisionCalculator()
+
 chosen_operation = ui.choose_operations()
 operand_one=ui.input_number()
 operand_two=ui.input_number()
-Op.operations_proper(chosen_operation, operand_one, operand_two)
+basic_calculations.operations_proper(chosen_operation, operand_one, operand_two)
+advanced_calculations.no_remainder(chosen_operation, operand_one, operand_two)
 ui.loop()
