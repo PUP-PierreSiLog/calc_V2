@@ -36,7 +36,6 @@ class Operations:
                 result = operand_one // operand_two
                 print(result)
 
-    
     def loop(self):
         while True:
             get_input=GetInput()
@@ -44,8 +43,8 @@ class Operations:
             user_loop = user_loop.upper()
             if user_loop == "Y":
                 chosen_operation=get_input.choose_operations()
-                operand_one=self.input_number()
-                operand_two=self.input_number()
+                operand_one=get_input.input_number()
+                operand_two=get_input.input_number()
                 self.operations_proper(chosen_operation, operand_one, operand_two)
                 continue
             elif user_loop == "N":
